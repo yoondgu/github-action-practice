@@ -16,9 +16,12 @@ permissions:
   checks: write
   contents: write
 jobs:
-  build:
+  if-test: 
+    name: iftestjob
+    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == 'true'
-
+    
+  build:
     runs-on: ubuntu-latest
 
     steps:
