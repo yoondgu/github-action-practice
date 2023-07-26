@@ -17,13 +17,6 @@ permissions:
   contents: write
   
 jobs:
-  print: 
-    runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged }}
-
-    steps:
-    - name: Print message
-      run: echo "Hello, world!"    
     
   build:
     runs-on: ubuntu-latest
@@ -54,3 +47,11 @@ jobs:
       with:
         report_paths: 'build/test-results/test/TEST-*.xml'
         token: ${{ github.token }}
+
+  print: 
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged }}
+
+    steps:
+    - name: Print message
+      run: echo "Hello, world!"    
