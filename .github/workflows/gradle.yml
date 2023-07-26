@@ -15,11 +15,15 @@ permissions:
   pull-requests: write
   checks: write
   contents: write
+  
 jobs:
-  if-test: 
-    name: iftestjob
+  print: 
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == 'true'
+
+    steps:
+    - name: Print message
+      run: echo "Hello, world!"    
     
   build:
     runs-on: ubuntu-latest
