@@ -50,7 +50,7 @@ jobs:
 
   print: 
     runs-on: ubuntu-latest
-    if: ${{ github.event.action == 'closed' && github.event.pull_request.merged }}
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
 
     steps:
     - name: Print message
