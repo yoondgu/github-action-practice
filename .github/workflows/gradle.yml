@@ -47,14 +47,3 @@ jobs:
       with:
         report_paths: 'build/test-results/test/TEST-*.xml'
         token: ${{ github.token }}
-
-  deploy: 
-      runs-on: ubuntu-latest
-      if: github.event.pull_request.merged == true
-
-      steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to server
-        run: |
