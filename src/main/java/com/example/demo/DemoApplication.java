@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		System.out.println("merge 7");
+		System.out.println("merge 8");
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
