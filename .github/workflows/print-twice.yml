@@ -21,7 +21,7 @@ jobs:
     - name: Print message
       run: echo "Hello, world!"    
 
-  print: 
+  print2: 
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged
 
