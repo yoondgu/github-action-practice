@@ -11,11 +11,6 @@ on:
   pull_request:
     branches: [ "main" ]
     types: [closed]
-
-permissions:
-  pull-requests: write
-  checks: write
-  contents: write
   
 jobs:
   print: 
