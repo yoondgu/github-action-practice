@@ -9,6 +9,7 @@ name: Java CI with Gradle
 
 on:
   pull_request:
+    types: [closed]
     branches: [ "main" ]
 
 permissions:
@@ -46,3 +47,7 @@ jobs:
       with:
         report_paths: 'build/test-results/test/TEST-*.xml'
         token: ${{ github.token }}
+
+  deploy: 
+      runs-on: ubuntu-latest
+      if: github.event.pull_request.merged == true
